@@ -17,15 +17,25 @@ This project examines how my client, Nationwide Maven toy chain store, is perfor
 - Excel
 - Dynamic Arrays
 
-## Data Cleaning & Transformation
+## Data Cleaning & Profiling
+- Conducted data profiling to check the quality of the data
 - Filtered rows to remove null values
-- Changed Data Types
 - Removed duplicates in dimension tables
+- Changed Data Types
+- Did a data validation to check that there are no negative values in the product cost and price
+- Removed the currency symbols before product cost and product price to remove the error that comes when changing data types.
+- Removed unnecessary columns
+- Added an age column to the date column
+- Added a unit margin in the product column
+- Trimmed whitespace from text fields
   
 
 
 ## Data Modeling
-- Fact Tables
+Merged 5 tables into star schema
+### Fact Tables
+- Sales 
+- Inventory
 ### Dimension Tables
 - Added a date table to the data model
 - Changed Data Types in the date table
@@ -33,6 +43,7 @@ This project examines how my client, Nationwide Maven toy chain store, is perfor
 - 
   
 ## DAX
-## PivotTables
+## Data Analysis
+-Pivot Tables
 ## Dashboard
 
