@@ -7,8 +7,6 @@ End-to-end Excel BI on the Landman Toy store chain sales dataset
 - [Tools Utilized](#Tools-Utilized)
 - [Data Cleaning & Transformation](#data-cleaning--transformation)
 
-
-
 ## Project Overview
 This project examines how my client, Nationwide Maven toy chain store, is performing across products, stores, and seasons, enabling the client to make informed, data-driven decisions about what to stock, where to place it, and when to promote it. The analysis transforms raw store data into clear, prioritized actions that drive revenue growth, protect margins, and keep shelves stocked with what customers actually want.
 
