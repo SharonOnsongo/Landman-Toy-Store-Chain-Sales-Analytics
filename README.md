@@ -4,7 +4,7 @@ End-to-end Excel BI on the Landman Toy store chain sales dataset
 ## Table of Contents
 - [Project Overview](#Project-overview)
 - [Data Sources](#data-sources)
-
+- [Tools Utilized](#Tools-Utilized)
 
 
 
