@@ -3,7 +3,7 @@ End-to-end Excel BI on the Landman Toy store chain sales dataset
 
 ## Table of Contents
 - [Project Overview](#Project-overview)
-
+- [Data Sources](#data-sources)
 
 
 
@@ -13,6 +13,11 @@ End-to-end Excel BI on the Landman Toy store chain sales dataset
 This project examines how my client, Nationwide Maven toy chain store, is performing across products, stores, and seasons, enabling the client to make informed, data-driven decisions about what to stock, where to place it, and when to promote it. The analysis transforms raw store data into clear, prioritized actions that drive revenue growth, protect margins, and keep shelves stocked with what customers actually want.
 ## Data Dictionary
 ## Data Sources
+This project uses 4 tables stored in the data folder
+- customers.xlsx** - Customer information and demographics
+- orders.xlsx** - Order transactions and details
+- products.xlsx** - Product catalog and pricing
+- sales.xlsx** - Sales performance metrics
 
 
 ## Tools Utilized
