@@ -5,7 +5,7 @@ End-to-end Excel BI on the Landman Toy store chain sales dataset
 - [Project Overview](#Project-overview)
 - [Data Sources](#data-sources)
 - [Tools Utilized](#Tools-Utilized)
-
+- [Data Cleaning & Transformation](Data-Cleaning-&-Transformation)
 
 
 
