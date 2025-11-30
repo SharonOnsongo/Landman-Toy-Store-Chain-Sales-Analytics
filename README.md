@@ -16,6 +16,7 @@ This project uses 4 tables from the Maven Toys sales data stored in the data fol
 - Products Table - Product catalog containing 35 products with pricing and category information
 - Inventory Table - Current stock levels for each product at each store location
 - Stores Table - Store information, including 50 locations across Mexico, with opening dates and location types
+- Calendar Table - Custom calendar table created in Power Query for time intelligence analysis, including Year, Quarter, Month, Week, and Day attributes
 
 
 ## Tools Utilized
@@ -26,6 +27,12 @@ This project uses 4 tables from the Maven Toys sales data stored in the data fol
 - Dynamic Arrays
 
 ## Data Cleaning & Transformation
+
+#### Calendar table
+-  Built a custom date dimension table in Power Query to enable time intelligence analysis
+-  Added hierarchical date attributes such as year, quarter, and month.
+-  Added business logic, such as isweekend
+
 
 #### Products Table
 - Conducted data profiling to check the quality of the data
