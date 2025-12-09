@@ -37,10 +37,10 @@ This project uses 4 tables from the Maven Toys sales data stored in the data fol
 ## Data Cleaning & Transformation
 
 ### Data Quality Assessment/General cleaning steps
-- Conducted a comprehensive data quality audit to check for data formatting issues,Text Inconsistency Missing Values,Orphan Records, and Currency Symbols
+- Conducted a comprehensive data quality audit to check for data formatting issues, Text Inconsistency, Missing Values, Orphan Records, and Currency Symbols
 -  Check for leading and trailing spaces in text fields
 -  Conducted Data Type Verification
--  Check for duplicates and null values and drcided on how tgo handle all of them according to busineess needs
+-  Check for duplicates and null values, and decide on how to handle all of them according to business needs
 
 #### Calendar table
 -  Built a custom date dimension table in Power Query to enable time intelligence analysis
@@ -65,16 +65,16 @@ This project uses 4 tables from the Maven Toys sales data stored in the data fol
 - Removed the currency symbols before product cost and product price to remove the error that comes when changing data types.
 - Removed unnecessary columns
 - Added an age column to the date column
-- Added custom columns to show profit per unit and profit marginunit margin in the product column
+- Added custom columns to show profit per unit and profit margin in the product column
 - Trimmed whitespace from text fields
-- Added a age column in the store table and age group for store maturity
+- Added an age column in the store table and an age group for store maturity
 - Checked for negative stock
-- Added anew conditional column for stock status
+- Added a conditional column for stock status anew
   
 
 
 ## Data Modeling
-Merged 5 tables into star schema
+Merged 5 tables into a star schema
 
 Products ➔ Sales (1:Many)
 Stores ➔ Sales (1:Many)
