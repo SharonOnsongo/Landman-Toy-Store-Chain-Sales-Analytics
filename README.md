@@ -10,6 +10,14 @@ End-to-end Excel BI on the Landman Toy store chain sales dataset
 ## Project Overview
 This project examines how my client, Nationwide Maven toy chain store, is performing across products, stores, and seasons, enabling the client to make informed, data-driven decisions about what to stock, where to place it, and when to promote it. The analysis transforms raw store data into clear, prioritized actions that drive revenue growth, protect margins, and keep shelves stocked with what customers actually want.
 
+## Business Objectives
+
+- Analyze sales performance across products, stores, and time periods
+- Optimize inventory management to reduce stockouts and excess inventory
+- Identify top-performing products and underperformers
+- Provide actionable insights for business growth and profitability improvement
+- Create executive-level dashboards for data-driven decision making
+
 ## Data Sources
 This project uses 4 tables from the Maven Toys sales data stored in the data folder
 - Sales Table - Transaction-level sales data with Sale_ID, Date, Store_ID, Product_ID, and Units sold
@@ -28,12 +36,22 @@ This project uses 4 tables from the Maven Toys sales data stored in the data fol
 
 ## Data Cleaning & Transformation
 
+### Data Quality Assessment
+- Conducted a comprehensive data quality audit to check for data formart issues,Text Inconsistency Missing Values,Orphan Records,Currency Symbols
+
 #### Calendar table
 -  Built a custom date dimension table in Power Query to enable time intelligence analysis
 -  Added hierarchical date attributes such as year, quarter, and month.
--  Added business logic, such as isweekend
+-  Added business logic, such as 
+
+#### Products Table
+- Removed the currency symbol from two columns preventing numeric calculations
+- 
+#### Sales Table
 
 
+#### Store Table
+#### Inventory Table
 #### Products Table
 - Conducted data profiling to check the quality of the data
 - Filtered rows to remove null values
@@ -53,6 +71,12 @@ This project uses 4 tables from the Maven Toys sales data stored in the data fol
 
 ## Data Modeling
 Merged 5 tables into star schema
+
+Products ➔ Sales (1:Many)
+Stores ➔ Sales (1:Many)
+Products ➔ Inventory (1:Many)
+Stores ➔ Inventory (1:Many)
+
 ### Fact Tables
 - Sales 
 - Inventory
