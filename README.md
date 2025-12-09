@@ -36,8 +36,11 @@ This project uses 4 tables from the Maven Toys sales data stored in the data fol
 
 ## Data Cleaning & Transformation
 
-### Data Quality Assessment
-- Conducted a comprehensive data quality audit to check for data formart issues,Text Inconsistency Missing Values,Orphan Records,Currency Symbols
+### Data Quality Assessment/General cleaning steps
+- Conducted a comprehensive data quality audit to check for data formatting issues,Text Inconsistency Missing Values,Orphan Records, and Currency Symbols
+-  Check for leading and trailing spaces in text fields
+-  Conducted Data Type Verification
+-  Check for duplicates and null values and drcided on how tgo handle all of them according to busineess needs
 
 #### Calendar table
 -  Built a custom date dimension table in Power Query to enable time intelligence analysis
@@ -45,7 +48,8 @@ This project uses 4 tables from the Maven Toys sales data stored in the data fol
 -  Added business logic, such as 
 
 #### Products Table
-- Removed the currency symbol from two columns preventing numeric calculations
+- Removed the currency symbol from two columns, preventing numeric calculations
+- Added the profit and profit margin column
 - 
 #### Sales Table
 
