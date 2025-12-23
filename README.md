@@ -42,7 +42,7 @@ All data cleaning and preparation was performed using Power Query
 -  Checked the data types in each column
 -  Conducted Data Type Verification
 -  Check for duplicates and null values, and decide on how to handle all of them according to business needs
-
+## Key Transformations Applied:
 #### Calendar table
 -  Built a custom date dimension table in Power Query to enable time intelligence analysis
 -  Added hierarchical date attributes such as year, quarter, and month.
