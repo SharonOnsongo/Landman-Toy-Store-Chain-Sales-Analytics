@@ -39,6 +39,7 @@ This project uses 4 tables from the Maven Toys sales data stored in the data fol
 ### Data Quality Assessment/General cleaning steps
 - Conducted a comprehensive data quality audit to check for data formatting issues, Text Inconsistency, Missing Values, Orphan Records, and Currency Symbols
 -  Check for leading and trailing spaces in text fields
+-  Checked the data types in each column
 -  Conducted Data Type Verification
 -  Check for duplicates and null values, and decide on how to handle all of them according to business needs
 
@@ -49,13 +50,19 @@ This project uses 4 tables from the Maven Toys sales data stored in the data fol
 
 #### Products Table
 - Removed the currency symbol from two columns, preventing numeric calculations
+- Changed Product_Cost and Product_Price to Currency type
 - Added the profit and profit margin column
+- Trimmed whitespace from Product_Name and Product_Category
 - 
 #### Sales Table
 
 
 #### Store Table
+- 
 #### Inventory Table
+- Validated no negative stock quantities
+- Added a conditional column to show the stock status
+- 
 #### Products Table
 - Conducted data profiling to check the quality of the data
 - Filtered rows to remove null values
