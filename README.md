@@ -35,7 +35,7 @@ This project uses 4 tables from the Maven Toys sales data stored in the data fol
 - Dynamic Arrays
 
 ## Data Cleaning & Transformation
-
+All data cleaning and preparation was performed using Power Query
 ### Data Quality Assessment/General cleaning steps
 - Conducted a comprehensive data quality audit to check for data formatting issues, Text Inconsistency, Missing Values, Orphan Records, and Currency Symbols
 -  Check for leading and trailing spaces in text fields
