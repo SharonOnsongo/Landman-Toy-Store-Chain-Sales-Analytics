@@ -55,10 +55,13 @@ All data cleaning and preparation was performed using Power Query
 - Trimmed whitespace from Product_Name and Product_Category
 - 
 #### Sales Table
-
+- 
 
 #### Store Table
-- 
+- Calculated store age in completed years, accounting for leap years (365.25 days) and rounding down to whole numbers for 
+  business and financial analysis purposes
+- Implemented store lifecycle segmentation using conditional logic in Power Query.This segmentation enables comparative analysis across store maturity levels
+  
 #### Inventory Table
 - Validated no negative stock quantities
 - Added a conditional column to show the stock status
