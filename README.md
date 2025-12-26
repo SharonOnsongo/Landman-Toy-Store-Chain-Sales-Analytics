@@ -37,12 +37,17 @@ This project uses 4 tables from the Maven Toys sales data stored in the data fol
 ## Data Cleaning & Transformation
 All data cleaning and preparation was performed using Power Query
 ### Data Quality Assessment/General cleaning steps
-- Conducted a comprehensive data quality audit to check for data formatting issues, Text Inconsistency, Missing Values, Orphan Records, and Currency Symbols
+-  Conducted a comprehensive data quality audit to check for data formatting issues, Text Inconsistency, Missing Values, Orphan Records, and Currency Symbols
 -  Check for leading and trailing spaces in text fields
 -  Checked the data types in each column
 -  Conducted Data Type Verification
 -  Check for duplicates and null values, and decide on how to handle all of them according to business needs
-## Key Transformations Applied:
+-  Conducted data profiling to check the quality of the data
+-  Removed unnecessary columns
+-  Filtered rows to remove null values
+-  Removed duplicates in dimension tables
+-  Changed Data Types
+### Key Transformations Applied:
 #### Calendar table
 -  Built a custom date dimension table in Power Query to enable time intelligence analysis
 -  Added hierarchical date attributes such as year, quarter, and month.
@@ -52,7 +57,7 @@ All data cleaning and preparation was performed using Power Query
 - Removed the currency symbol from two columns, preventing numeric calculations
 - Changed Product_Cost and Product_Price to Currency type
 - Added the profit and profit margin column
-- Trimmed whitespace from Product_Name and Product_Category
+- Trimmed whitespace from Product Name and Product Category
 - 
 #### Sales Table
 - 
@@ -67,24 +72,18 @@ All data cleaning and preparation was performed using Power Query
 - Added a conditional column to show the stock status
 - 
 #### Products Table
-- Conducted data profiling to check the quality of the data
-- Filtered rows to remove null values
-- Removed duplicates in dimension tables
-- Changed Data Types
 - Did a data validation to check that there are no negative values in the product cost and price
-- Removed the currency symbols before product cost and product price to remove the error that comes when changing data types.
-- Removed unnecessary columns
-- Added an age column to the date column
+-Product_Cost and Product_Price columns contained currency symbols ("$") stored as text, preventing conversion to numeric data types and blocking mathematical operations
 - Added custom columns to show profit per unit and profit margin in the product column
-- Trimmed whitespace from text fields
-- Added an age column in the store table and an age group for store maturity
-- Checked for negative stock
-- Added a conditional column for stock status anew
-  
 
+  
+I loaded the data by connection and added the tables to data model
 
 ## Data Modeling
-Merged 5 tables into a star schema
+- Star schema with proper fact and dimension tables
+- 5 relationships connecting Sales & Inventory to dimensions
+- Created 5 dimension-to-fact relationships with appropriate cardinality
+
 
 Products ➔ Sales (1:Many)
 Stores ➔ Sales (1:Many)
@@ -95,10 +94,9 @@ Stores ➔ Inventory (1:Many)
 - Sales 
 - Inventory
 ### Dimension Tables
-- Added a date table to the data model
-- Changed Data Types in the date table
-- Added columns to the date table, such as day of week and month
-- 
+- Products
+- Stores
+- Calender
   
 ## DAX
 ## Data Analysis
