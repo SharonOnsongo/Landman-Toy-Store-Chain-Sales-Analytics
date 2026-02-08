@@ -8,15 +8,15 @@ End-to-end Excel BI on the Landman Toy store chain sales dataset
 - [Data Cleaning & Transformation](#data-cleaning--transformation)
 
 ## Project Overview
-This project examines how my client, Nationwide Maven toy chain store, is performing across products, stores, and seasons, enabling the client to make informed, data-driven decisions about what to stock, where to place it, and when to promote it. The analysis transforms raw store data into clear, prioritized actions that drive revenue growth, protect margins, and keep shelves stocked with what customers actually want.
+This project analyzes the performance of Maven Toys, a nationwide toy chain store across Mexico, examining sales patterns across products, stores, and seasons. The objective is to transform raw transactional and operational data into actionable business insights that support strategic decisions around revenue growth, inventory optimization, store performance, product performance, seasonal trends, and support data-driven decision-making.
 
 ## Business Objectives
 
 - Analyze sales performance across products, stores, and time periods
 - Optimize inventory management to reduce stockouts and excess inventory
-- Identify top-performing products and underperformers
+- Identify top-performing and underperforming products
 - Provide actionable insights for business growth and profitability improvement
-- Create executive-level dashboards for data-driven decision making
+- Create executive-level dashboards to support data-driven decision making
 
 ## Data Sources
 This project uses 4 tables from the Maven Toys sales data stored in the data folder
@@ -28,10 +28,11 @@ This project uses 4 tables from the Maven Toys sales data stored in the data fol
 
 
 ## Tools Utilized
+ Excel
 - Power Query
 - Power Pivot
 - DAX
-- Excel
+- Pivot Tables & Charts
 - Dynamic Arrays
 
 ## Data Cleaning & Transformation
