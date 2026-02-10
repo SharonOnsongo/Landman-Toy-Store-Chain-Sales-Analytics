@@ -89,20 +89,21 @@ All data preparation was performed in Power Query following best-practice ETL pr
 
 
 ## Data Modeling
-- The data model follows a star schema design with proper fact and dimension tables
-  ### Fact Tables
+The data model follows a star schema design with proper fact and dimension tables
+  #### Fact Tables
 - Sales 
 - Inventory
-  ### Dimension Tables
+  #### Dimension Tables
 - Products
 - Stores
 - Calender
   
-- Created 5 dimension-to-fact relationships with appropriate cardinality
-   Products ➔ Sales (1:Many)
-   Stores ➔ Sales (1:Many)
-   Products ➔ Inventory (1:Many)
-   Stores ➔ Inventory (1:Many)
+Created 5 dimension-to-fact relationships with appropriate cardinality
+   - Products ➔ Sales (1:Many)
+   - Stores ➔ Sales (1:Many)
+   - Products ➔ Inventory (1:Many)
+   - Stores ➔ Inventory (1:Many)
+![](https://github.com/SharonOnsongo/Maven-Toy-Store-Chain-Sales-Analytics/blob/main/Data%20model%20.png)
 
   
 
