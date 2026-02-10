@@ -103,6 +103,7 @@ Created 5 dimension-to-fact relationships with appropriate cardinality
    - Stores ➔ Sales (1:Many)
    - Products ➔ Inventory (1:Many)
    - Stores ➔ Inventory (1:Many)
+     
 ![](https://github.com/SharonOnsongo/Maven-Toy-Store-Chain-Sales-Analytics/blob/main/Data%20model%20.png)
 
   
