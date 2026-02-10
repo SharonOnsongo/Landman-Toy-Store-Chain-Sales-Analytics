@@ -15,6 +15,7 @@ This project analyzes the performance of Maven Toys, a nationwide toy chain stor
 - Analyze sales performance across products, stores, and time periods
 - Optimize inventory management to reduce stockouts and excess inventory
 - Identify top-performing and underperforming products
+- Compare performance across store lifecycle stages
 - Provide actionable insights for business growth and profitability improvement
 - Create executive-level dashboards to support data-driven decision making
 
@@ -36,68 +37,75 @@ This project uses 4 tables from the Maven Toys sales data stored in the data fol
 - Dynamic Arrays
 
 ## Data Cleaning & Transformation
-All data cleaning and preparation was performed using Power Query
-### Data Quality Assessment/General cleaning steps
--  Conducted a comprehensive data quality audit to check for data formatting issues, Text Inconsistency, Missing Values, Orphan Records, and Currency Symbols
--  Check for leading and trailing spaces in text fields
--  Checked the data types in each column
--  Conducted Data Type Verification
--  Check for duplicates and null values, and decide on how to handle all of them according to business needs
--  Conducted data profiling to check the quality of the data
--  Removed unnecessary columns
--  Filtered rows to remove null values
--  Removed duplicates in dimension tables
--  Changed Data Types
+All data preparation was performed in Power Query following best-practice ETL principles.
+
+### Data Quality Assessment
+- Conducted a comprehensive data quality audit checking for:
+  1. Data type inconsistencies
+  2. Text formatting issues (leading/trailing spaces)
+  3. Missing values and null records
+  4. Duplicates in dimension tables
+  5. Orphan records (referential integrity)
+- Performed data profiling to validate dataset integrity.
+
 ### Key Transformations Applied:
 #### Calendar table
--  Built a custom date dimension table in Power Query to enable time intelligence analysis
+-  Built a custom date dimension table in Power Query for time intelligence analysis
 -  Added hierarchical date attributes such as year, quarter, and month.
 -  Added business logic, such as 
 
 #### Products Table
 - Removed the currency symbol from two columns, preventing numeric calculations
-- Changed Product_Cost and Product_Price to Currency type
-- Added the profit and profit margin column
+- Converted cost and price columns to Currency data type
+- Added calculated columns
+  1. profit per unit
+  2. profit margin
 - Trimmed whitespace from Product Name and Product Category
-- 
+- Validated no negative values in pricing columns
+  
 #### Sales Table
-- 
+- Ensured Units sold contain only positive values
+- Verified all Sale IDs are unique
+- Confirmed all Store IDs and Product IDs have matching records in dimension tables
 
 #### Store Table
-- Calculated store age in completed years, accounting for leap years (365.25 days) and rounding down to whole numbers for 
+- Created calculated column.Calculated store age in completed years, accounting for leap years (365.25 days) and rounding down to whole numbers for 
   business and financial analysis purposes
-- Implemented store lifecycle segmentation using conditional logic in Power Query.This segmentation enables comparative analysis across store maturity levels
-  
+- Added a conditional column. Implemented store lifecycle segmentation using conditional logic . This segmentation enables comparative analysis across store maturity levels.
+- 
 #### Inventory Table
 - Validated no negative stock quantities
-- Added a conditional column to show the stock status
-- 
+- Added conditional column: Stock Status
+- Confirmed all Store_IDs and Product_IDs reference valid dimension records
+  
 #### Products Table
 - Did a data validation to check that there are no negative values in the product cost and price
 -Product_Cost and Product_Price columns contained currency symbols ("$") stored as text, preventing conversion to numeric data types and blocking mathematical operations
 - Added custom columns to show profit per unit and profit margin in the product column
 
-  
-I loaded the data by connection and added the tables to data model
+### Data Loading
+- Loaded all tables using Connection Only mode
+- Added all tables to the Data Model for relationship management in Power Pivot
+
 
 ## Data Modeling
-- Star schema with proper fact and dimension tables
-- 5 relationships connecting Sales & Inventory to dimensions
-- Created 5 dimension-to-fact relationships with appropriate cardinality
-
-
-Products ➔ Sales (1:Many)
-Stores ➔ Sales (1:Many)
-Products ➔ Inventory (1:Many)
-Stores ➔ Inventory (1:Many)
-
-### Fact Tables
+- The data model follows a star schema design with proper fact and dimension tables
+  ### Fact Tables
 - Sales 
 - Inventory
-### Dimension Tables
+  ### Dimension Tables
 - Products
 - Stores
 - Calender
+  
+- Created 5 dimension-to-fact relationships with appropriate cardinality
+   Products ➔ Sales (1:Many)
+   Stores ➔ Sales (1:Many)
+   Products ➔ Inventory (1:Many)
+   Stores ➔ Inventory (1:Many)
+
+  
+
   
 ## DAX
 ## Data Analysis
