@@ -111,6 +111,8 @@ Created 5 dimension-to-fact relationships with appropriate cardinality
   
 ## DAX
 Created  a measures table 
+
+
 ## Data Analysis
 -Pivot Tables
 ## Dashboard
