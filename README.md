@@ -52,7 +52,7 @@ All data preparation was performed in Power Query following best-practice ETL pr
 #### Calendar table
 -  Built a custom date dimension table in Power Query for time intelligence analysis
 -  Added hierarchical date attributes such as year, quarter, and month.
--  Added business logic, such as 
+-The Date table has been marked as an official Date Table in Power Pivot  to ensure all DAX time intelligence function work correctly
 
 #### Products Table
 - Removed the currency symbol from two columns, preventing numeric calculations
@@ -116,8 +116,7 @@ Created  a measures table using power pivot
 
 ### Sales Pivot tables 
 
-- Profir margin Conditional formatting
-
+- Applied conditional formatting to Profit Margin KPIs with color-coded thresholds: green (>30%), yellow (20-30%), and red (<20%) to provide instant visual indicators of performance health.
 
 ## Data Analysis
 -Pivot Tables
