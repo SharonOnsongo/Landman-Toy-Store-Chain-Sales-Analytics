@@ -110,7 +110,13 @@ Created 5 dimension-to-fact relationships with appropriate cardinality
 
   
 ## DAX
-Created  a measures table 
+Created  a measures table using power pivot
+
+## Power Pivot
+
+### Sales Pivot tables 
+
+- Profir margin Conditional formatting
 
 
 ## Data Analysis
